@@ -32,77 +32,77 @@
     <div class="input-group mb-5 offset-4 col-4">
       <input id="city-input" type="text" class="form-control" placeholder="Rentrer le nom d'une ville">
       <div class="input-group-append">
-        <button id="city-input-button" class="btn btn-success" type="submit" onclick="start()">Actualiser</button>
+        <button id="city-input-button" class="btn btn-success" type="submit"
+          onclick="start(document.getElementById('city-input').value)">Actualiser</button>
       </div>
     </div>
   </div>
-  <d< /div>
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm offset-sm-1">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Aujourd'hui</h4>
+        </div>
+        <div class="card-body">
+          <h2 id="d0-forecast-main" class="card-title">
+          </h2>
+          <div>
+            <p id="d0-forecast-more-info"></p>
+            <div id="d0-icon-weather-container"></div>
+            <h3 id="d0-forecast-temp"> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm offset-sm-1">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Aujourd'hui</h4>
+            <h4 class="my-0 font-weight-normal">Demain</h4>
           </div>
           <div class="card-body">
-            <h2 id="today-forecast-main" class="card-title">
+            <h2 id="d1-forecast-main" class="card-title">
             </h2>
             <div>
-              <p id="today-forecast-more-info"></p>
-              <div id="icon-weather-container"></div>
-              <h3 id="today-forecast-temp"> </h3>
+              <p id="d1-forecast-more-info"></p>
+              <div id="d1-icon-weather-container"></div>
+              <h3 id="d1-forecast-temp"> </h3>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm offset-sm-1">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Après demain</h4>
+          </div>
+          <div class="card-body">
+            <h2 id="d2-forecast-main" class="card-title">
+            </h2>
+            <div>
+              <p id="d2-forecast-more-info"></p>
+              <div id="d2-icon-weather-container"></div>
+              <h3 id="d2-forecast-temp"> </h3>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm offset-sm-1">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Encore après demain</h4>
+          </div>
+          <div class="card-body">
+            <h2 id="d3-forecast-main" class="card-title">
+            </h2>
+            <div>
+              <p id="d3-forecast-more-info"></p>
+              <div id="d3-icon-weather-container"></div>
+              <h3 id="d3-forecast-temp"> </h3>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <div class="card-deck mb-3 text-center">
-          <div class="card mb-4 shadow-sm offset-sm-1">
-            <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Demain</h4>
-            </div>
-            <div class="card-body">
-              <h2 id="today-forecast-main" class="card-title">
-              </h2>
-              <div>
-                <p id="today-forecast-more-info"></p>
-                <div id="icon-weather-container"></div>
-                <h3 id="today-forecast-temp"> </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4 shadow-sm offset-sm-1">
-            <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Après demain</h4>
-            </div>
-            <div class="card-body">
-              <h2 id="today-forecast-main" class="card-title">
-              </h2>
-              <div>
-                <p id="today-forecast-more-info"></p>
-                <div id="icon-weather-container"></div>
-                <h3 id="today-forecast-temp"> </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4 shadow-sm offset-sm-1">
-            <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Encore après demain</h4>
-            </div>
-            <div class="card-body">
-              <h2 id="today-forecast-main" class="card-title">
-              </h2>
-              <div>
-                <p id="today-forecast-more-info"></p>
-                <div id="icon-weather-container"></div>
-                <h3 id="today-forecast-temp"> </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="js/API_Weather.js"></script>
-      <script src="js/script.js"></script>
+    </div>
+    <script src="js/API_Weather.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
