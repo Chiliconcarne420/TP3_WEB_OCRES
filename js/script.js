@@ -11,16 +11,8 @@ function start(city) {
     .then(function (response) {
       // Récupère la donnée d'une API
       const data = response.data.list;
-
-      // data.map((day => {
-      //   document.getElementById(`day${i}-forecast-main`).innerHTML = day.weather[0].main;
-      //   document.getElementById(`day${i}-forecast-more-info`).innerHTML = day.weather[0].description;
-      //   document.getElementById(`day${i}-icon-weather-container`).innerHTML = apiWeather.getHTMLElementFromIcon(day.weather[0].icon);
-      //   document.getElementById(`day${i}-forecast-temp`).innerHTML = `${day.temp.day}°C`;
-      // }))
       console.log(data)
       data.map((d, i) => {
-        //for (let i = 0; i < 4; i++) {
         // On récupère l'information principal
         const main = d.weather[0].main;
         const description = d.weather[0].description;
@@ -31,7 +23,6 @@ function start(city) {
         document.getElementById(`d${i}-forecast-more-info`).innerHTML = description;
         document.getElementById(`d${i}-icon-weather-container`).innerHTML = icon;
         document.getElementById(`d${i}-forecast-temp`).innerHTML = `${temp}°C`;
-        // }
       })
     })
     .catch(function (error) {
